@@ -6,6 +6,7 @@ Installation Steps:
 -----------------------------
 
 //npm install -g nodemon
+
 cd OnlineBloggingSPAWebApp
 
 npm install

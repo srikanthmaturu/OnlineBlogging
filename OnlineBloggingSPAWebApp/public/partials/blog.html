@@ -1,0 +1,63 @@
+<div class="container">
+    <div><a style="float:right" href="/#/" class="btn btn-primary">Go Home</a></div>
+    <div>
+        <h2>{{current_blog.title}}</h2>
+        by
+        <h4>&nbsp;{{current_blog.author}}</h4>
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>Rating: {{current_blog.rating | number:2}}</h4>
+            </div>
+            <div class="col-sm-8">
+                Enter rating:
+                <input style="display:inline" id="userrating" type="text" ng-model="user_rating" placeholder="rating"></input>
+                <button ng-click="rateBlog()" class="btn btn-default">Rate it!</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <ul ng-repeat="post in current_blog.posts" class="blog-posts-list">
+            <li class="blog-posts-list-item">
+                <hr/>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h2>{{post.heading}}</h2>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4 style="padding:5px">{{post.date}}</h4>
+                    </div>
+                    <div class="col-sm-2" style="padding:5px">
+                        <button ng-click="deletePost(post)" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+                <p>{{post.body}}</p>
+            </li>
+        </ul>
+    </div>
+    <hr/>
+    <br/>
+    <div>
+        <div>
+            <h3>Add a new blog post!</h3>
+        </div>
+        <div>
+            <form>
+                <div class="form-group">
+                    <label for="heading">Heading</label>
+                    <input id="heading" type="text" class="form-control" ng-model="new_post.heading"></input>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input id="date" type="date" class="form-control" ng-model="new_post.date"></input>
+                </div>
+                <div class="form-group">
+                    <label for="body">Body</label>
+                    <textarea id="body" type="text" class="form-control" rows="5" ng-model="new_post.body"></textarea>
+                </div>
+                <button ng-click="createPost()" class="btn btn-success">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>

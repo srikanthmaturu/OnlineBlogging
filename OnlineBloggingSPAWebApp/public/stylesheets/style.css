@@ -1,0 +1,81 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.blog-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-list-item {
+    padding: 5px;
+    background: white;
+    border: 5px black;
+}
+
+.blog-list-item:nth-child(even) {
+    background: darkcyan;
+}
+
+.blog-list-item a {
+    font-size: 20px;
+}
+
+.blog-rating {
+    padding: 5px;
+}
+
+.blog-posts-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-posts-list-item {
+    padding: 5px;
+    color: black;
+    background: white;
+}
+
+a {
+    color: #00B7FF;
+}
+
+#header {
+    background-color: #062b39;
+    margin: auto;
+    padding: 15px;
+    border-bottom-color: 1px solid black;
+}
+
+.header-title {
+    color: white;
+    padding-left: 100px;
+}
+
+#footer {
+    background-color: #062b39;
+    margin: auto;
+    padding: 15px;
+    border-top-color: 1px solid black;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}

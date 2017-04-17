@@ -1,0 +1,45 @@
+<div class="container">
+    <div>
+        <div>
+            <h1>Blogs</h1>
+        </div>
+        <div>
+            <ul ng-repeat="blog in blogs" class="blog-list">
+                <li class="blog-list-item">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <a href="/#/blogs/{{blog._id}}">{{blog.title}}</a>
+                        </div>
+                        <div class="col-sm-2" class="blog-rating">
+                            <h4>Rating - {{blog.rating | number:2}} &nbsp;</h4>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="#" ng-click="deleteBlog(blog)" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr/>
+    <div>
+        <div>
+            <h3>Create a new blog?</h3>
+        </div>
+        <div>
+            <form>
+                <div class="form-group">
+                    <label for="title">Blog Title</label>
+                    <input id="title" type="text" class="form-control" ng-model="new_blog.title"></input>
+                </div>
+                <div class="form-group">
+                    <label for="author">Blog Author</label>
+                    <input id="author" type="text" class="form-control" ng-model="new_blog.author"></input>
+                </div>
+                <button ng-click="createBlog()" class="btn btn-success">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
